@@ -4,7 +4,7 @@ export const fetchEvents = () => {
 	return axios({
 		method:'get',
 		url:"https://www.eventbriteapi.com/v3/events/search/?token=FL7XRX7KTFAZN3TLOMLO",
-		data: {
+		params: {
 			q: "tech"
 		}
 	}).then(response => console.log(response.data.events));
