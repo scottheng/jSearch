@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Root from './components/root';
-import { fetchEvents } from './utils/eventbriteAPI';
+import { fetchEvents, fetchEventbriteEvent } from './utils/eventbriteAPI';
 import { fetchMeetups, fetchMeetupPicture } from './utils/meetupAPI';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.fetchEvents = fetchEvents;
   window.fetchMeetups = fetchMeetups;
   window.fetchMeetupPicture = fetchMeetupPicture;
+  window.fetchEventbriteEvent = fetchEventbriteEvent;
   ReactDOM.render(<Root/>, root);
 
 

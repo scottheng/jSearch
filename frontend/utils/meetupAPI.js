@@ -28,3 +28,4 @@ export const fetchMeetupPicture = () => {
     // }
   }).then(response => console.log(response));
 };
+
