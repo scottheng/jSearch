@@ -4,9 +4,8 @@ import { fetchMeetups } from '../../actions/meetup_actions';
 
 
 const mapStateToProps = (state, ownProps) => {
-  // console.log(state);
   return {
-    name: state
+    meetups: state.meetup.data
   };
 };
 
