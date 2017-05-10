@@ -3,9 +3,12 @@ import Meetup from './meetup';
 import fetchMeetups from '../../actions/meetup_actions';
 
 
-const mapStateToProps = (state, ownProps) => ({
-  name: state
-});
+const mapStateToProps = (state, ownProps) => {
+  // console.log(state);
+  return {
+    name: state
+  };
+};
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
   fetchMeetups: (request) => dispatch(fetchMeetups(request))

@@ -18,7 +18,7 @@ import axios from 'axios';
 
 
 //example
-export const fetchMeetups = () => {
+export const fetchMeetups = (request) => {
 	return axios({
 		method:'get',
 		url:"https://api.meetup.com/2/open_events/?key=682f5e4b26d16d31377034866e33",
@@ -30,7 +30,7 @@ export const fetchMeetups = () => {
 			// time: epoch,
 			text_format:"plain"
     }
-	}).then(response => console.log(response.data.results));
+	});
 };
 
 // let epoch = new Date('2016-10-11').getTime();
