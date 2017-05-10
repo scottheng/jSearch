@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-
+import MeetupReducer from './meetup_reducer';
 
 const rootReducer = combineReducers({
-	// session: SessionReducer
+	meetup: MeetupReducer
 });
 
 export default rootReducer;

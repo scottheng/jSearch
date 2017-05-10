@@ -1,4 +1,5 @@
 import React from 'react';
+import MeetupContainer from './meetup/meetup_container';
 
 class Root extends React.Component{
   constructor(props){
@@ -8,7 +9,7 @@ class Root extends React.Component{
   render(){
     return(
       <div>
-        <div>hi</div>
+        <MeetupContainer/>
       </div>
     );
   }

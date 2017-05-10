@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Meetups extends Component{
+class Meetup extends Component{
   constructor(props){
     super(props);
   }
@@ -10,10 +10,14 @@ class Meetups extends Component{
   }
 
   render(){
-    
+    console.log(this.props);
+    return(
+      <div>
+        <div>hi</div>
+      </div>
+    );
   }
 
 }
 
-
-export default Meetups;
+export default Meetup;
