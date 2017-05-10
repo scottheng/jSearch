@@ -10,4 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
   window.fetchMeetups = fetchMeetups;
   window.fetchMeetupPicture = fetchMeetupPicture;
   ReactDOM.render(<Root/>, root);
+
+
+  // let epoch = new Date('2016-10-11').getTime();
+  // console.log(epoch);
 });

@@ -7,5 +7,5 @@ export const fetchEvents = () => {
 		params: {
 			q: "tech"
 		}
-	}).then(response => console.log(response));
+	}).then(response => console.log(response.data.events));
 };
