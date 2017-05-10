@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Meetup from './meetup';
-import fetchMeetups from '../../actions/meetup_actions';
+import { fetchMeetups } from '../../actions/meetup_actions';
 
 
 const mapStateToProps = (state, ownProps) => {

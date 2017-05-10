@@ -6,6 +6,7 @@ class Meetup extends Component{
   }
 
   componentDidMount(){
+    console.log(this.props)
     const request = {};
     this.props.fetchMeetups(request);
   }
