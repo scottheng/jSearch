@@ -1,4 +1,4 @@
-import * as APIUtil from 'utils/eventbriteAPI';
+import * as APIUtil from '../utils/eventbriteAPI';
 
 export const RECEIVE_EB_EVENTS = 'RECEIVE_EB_EVENTS';
 export const RECEIVE_EB_EVENT = 'RECEIVE_EB_EVENT';

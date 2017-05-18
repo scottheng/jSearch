@@ -15,6 +15,8 @@ class eventbriteIndex extends React.Component {
 			<div>
 				<h1>Hello eventbrite</h1>
 			</div>
-		)
+		);
 	}
 }
+
+export default eventbriteIndex;
