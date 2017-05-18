@@ -20,18 +20,24 @@ class Meetup extends Component{
   }
 
   render(){
+
     console.log(this.props);
-    let row;
-    if (Object.keys(this.props.meetups).length !== 0){
-      row = this.props.meetups.results.slice(0, 10);
+
+    if(Object.keys(this.props.meetups).length === 0){
+      return <div>Loading...</div>;
     }
+
+    let row = this.props.meetups.results.slice(0, 10);
     console.log(row);
+
     return(
       <div>
         <div>
-          {row.map(el => (
-            <li>el.name</li>
-          ))}
+          <ul>
+            {row.map( (el, id) => (
+              <li key={id}>{el.name}</li>
+            ))}
+          </ul>
         </div>
       </div>
     );
