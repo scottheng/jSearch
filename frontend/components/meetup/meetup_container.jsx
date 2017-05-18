@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import Meetup from './meetup';
 import { fetchMeetups } from '../../actions/meetup_actions';
-
+import { meetupDataSelector } from '../../reducers/meetup_selectors';
 
 const mapStateToProps = (state, ownProps) => {
   return {
