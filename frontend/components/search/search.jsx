@@ -4,32 +4,48 @@ import React, { Component } from 'react';
 class Search extends Component{
   constructor(props){
     super(props);
-    this.handleChange = this.handleChange.bind(this);
+    this.handleInput = this.handleInput.bind(this);
+    this.handleZipcode = this.handleZipcode.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleSelect = this.handleSelect.bind(this);
 
     this.state = {
       input: "",
-      date: null,
-      zipcode: null,
-      radius: null
+      date: "",
+      zipcode: "",
+      radius: ""
     };
   }
 
-  handleChange(event){
-    event.preventDefault();
-    this.setState({input: event.target.value});
+  handleInput(e){
+    e.preventDefault();
+    // console.log(e.target.value);
+    this.setState({input: e.target.value});
+    // console.log(this.state.input);
   }
 
-  handleSubmit(event){
-    event.preventDefault();
-    this.setState({input: ""});
-    //dispatch both actions here.
+  handleZipcode(e){
+    e.preventDefault();
+    // console.log(e.target.value)
+    let zipcode = e.target.value;
+    console.log(`before: ${this.state.zipcode}`);
+    if(zipcode.length <= 5 ){
+      this.setState({zipcode});
+    }
+    console.log(`after: ${this.state.zip}`);
   }
 
   handleSelect(event){
     event.preventDefault();
-    this.setState({radius: event.target.value})
+    let radius = parseInt(event.target.value);
+    this.setState({radius});
+  }
+
+  handleSubmit(event){
+    event.preventDefault();
+    //dispatch both actions here.
+    console.log(this.state);
+    this.setState({input: "", radius: "", date: "", zipcode: ""});
   }
 
   render(){
@@ -37,13 +53,17 @@ class Search extends Component{
       <div>
         <div>
           <form onSubmit={this.handleSubmit}>
-            <input onChange={this.handleChange} value={this.state.input} type="text" placeholder="Search here"/>
 
-            <select onChange={this.handleSelect}>
-              <option value=5>5 miles</option>
-              <option value=10>10 miles</option>
-              <option value=25>25 miles</option>
-              <option value=50>50 miles</option>
+            <input onChange={this.handleInput} value={this.state.input} type="text" placeholder="Search here"/>
+
+            <input onChange={this.handleZipcode} value={this.state.zipcode} type="number" placeholder="Zip Code"/>
+
+            <select value={this.state.radius} onChange={this.handleSelect}>
+              <option value="" disabled>Select Radius</option>
+              <option value='5'>5 miles</option>
+              <option value='10'>10 miles</option>
+              <option value='25'>25 miles</option>
+              <option value='50'>50 miles</option>
             </select>
 
             <input type="submit"/>
