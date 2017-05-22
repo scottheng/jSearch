@@ -2,7 +2,7 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { HashRouter as Router, Route, IndexRoute, onEnter } from 'react-router-dom';
 import MeetupContainer from './meetup/meetup_container';
-
+// import injectTapEventPlugin from 'react-tap-event-plugin';
 import App from './app';
 
 class Root extends React.Component{

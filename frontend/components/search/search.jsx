@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-
+import DatePicker from 'material-ui/DatePicker';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 class Search extends Component{
   constructor(props){
@@ -9,11 +10,13 @@ class Search extends Component{
     this.handleZipcode = this.handleZipcode.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleSelect = this.handleSelect.bind(this);
+    this.handleDate = this.handleDate.bind(this);
 
     this.state = {
       input: "",
       city: "",
-      date: "",
+      startDate: null,
+      endDate: null,
       zipcode: "",
       radius: ""
     };
@@ -35,11 +38,11 @@ class Search extends Component{
     e.preventDefault();
     // console.log(e.target.value)
     let zipcode = e.target.value;
-    console.log(`before: ${this.state.zipcode}`);
+    // console.log(`before: ${this.state.zipcode}`);
     if(zipcode.length <= 5 ){
       this.setState({zipcode});
     }
-    console.log(`after: ${this.state.zip}`);
+    // console.log(`after: ${this.state.zip}`);
   }
 
   handleSelect(event){
@@ -51,8 +54,21 @@ class Search extends Component{
   handleSubmit(event){
     event.preventDefault();
     //dispatch both actions here.
-    console.log(this.state);
-    this.setState({input: "", radius: "", date: "", zipcode: ""});
+    // console.log(this.state);
+    // console.log(this.state.date.getTime());
+    this.setState({input: "", city: "", radius: "", startDate: null, endDate: null, zipcode: ""});
+  }
+
+  handleStartDate(event, date){
+    this.setState({
+      startDate: date,
+    });
+  }
+
+  handleDate(event, date){
+    this.setState({
+      endDate: date,
+    });
   }
 
   render(){
@@ -75,8 +91,24 @@ class Search extends Component{
               <option value='50'>50 miles</option>
             </select>
 
+
             <input type="submit"/>
           </form>
+         
+          <MuiThemeProvider>
+            <DatePicker
+              hintText="Start Date Input"
+              value={this.state.startDate}
+              onChange={this.handleStartDate}
+            />
+          </MuiThemeProvider>
+          <MuiThemeProvider>
+            <DatePicker
+              hintText="End Date Input"
+              value={this.state.endDate}
+              onChange={this.handleEndDate}
+            />
+          </MuiThemeProvider>
         </div>
       </div>
     );
