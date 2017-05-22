@@ -1,17 +1,18 @@
 import { connect } from 'react-redux';
 
-import { fetchEvents } from '../../actions/eventbrite_actions';
+import { fetchEbEvents } from '../../actions/eventbrite_actions';
 
 import eventbriteIndex from './eventbrite_index';
 
 const mapStateToProps = (state, ownProps) => {
+	console.log(state);
 	return {
-		events: state.events
+		events: state.eventbrite
 	};
 };
 
 const mapDispatchToProps = (dispatch) => ({
-	fetchEvents: () => dispatch(fetchEvents())
+	fetchEbEvents: () => dispatch(fetchEbEvents())
 });
 
 export default connect(
