@@ -5,12 +5,14 @@ class Search extends Component{
   constructor(props){
     super(props);
     this.handleInput = this.handleInput.bind(this);
+    this.handleCity = this.handleCity.bind(this);
     this.handleZipcode = this.handleZipcode.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleSelect = this.handleSelect.bind(this);
 
     this.state = {
       input: "",
+      city: "",
       date: "",
       zipcode: "",
       radius: ""
@@ -22,6 +24,11 @@ class Search extends Component{
     // console.log(e.target.value);
     this.setState({input: e.target.value});
     // console.log(this.state.input);
+  }
+
+  handleCity(e){
+    e.preventDefault();
+    this.setState({city: e.target.value});
   }
 
   handleZipcode(e){
@@ -55,6 +62,8 @@ class Search extends Component{
           <form onSubmit={this.handleSubmit}>
 
             <input onChange={this.handleInput} value={this.state.input} type="text" placeholder="Search here"/>
+
+            <input onChange={this.handleCity} value={this.state.city} type="text" placeholder="City" />
 
             <input onChange={this.handleZipcode} value={this.state.zipcode} type="number" placeholder="Zip Code"/>
 
