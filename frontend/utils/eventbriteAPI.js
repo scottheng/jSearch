@@ -1,14 +1,16 @@
 import axios from 'axios';
 
-export const fetchEvents = (searchQuery, zipcode, radius, date) => {
+export const fetchEvents = (searchQuery, zipcode, radius, startDate, endDate) => {
 	return axios({
 		method:'get',
 		url:"https://www.eventbriteapi.com/v3/events/search/?token=FL7XRX7KTFAZN3TLOMLO",
 		params: {
-			q: "cooking",
-			"location.address": "94105",
-			"location.within": "5mi",
-			sort_by: "date"
+			q: {searchQuery},
+			"location.address": {zipcode},
+			"location.within": `${radius}mi`,
+			sort_by: "date",
+			"start_date.range_start": {startDate},
+			"start_date.range_end": {endDate}
 		}
 	});
 };
