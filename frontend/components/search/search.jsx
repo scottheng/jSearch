@@ -57,6 +57,7 @@ class Search extends Component{
     //dispatch both actions here.
     // console.log(this.state);
     // console.log(this.state.date.getTime());
+    this.props.fetchMeetups(this.state);
     this.setState({input: "", city: "", radius: "", startDate: null, endDate: null, zipcode: ""});
   }
 
