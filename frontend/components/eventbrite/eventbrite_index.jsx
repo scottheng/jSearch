@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
+import { timeStampParser } from '../../utils/timestamp_parser';
 
 class eventbriteIndex extends React.Component {
 	constructor(props) {
@@ -15,6 +16,7 @@ class eventbriteIndex extends React.Component {
 	}
 
 	render() {
+		console.log(this.props.events);
     if(this.props.events.length === 0){
       return <div>Loading...</div>;
     }
@@ -24,8 +26,12 @@ class eventbriteIndex extends React.Component {
 				<h1>Hello eventbrite</h1>
 				<ul>
 					{this.props.events.map((event, idx) => {
+						const datetime = timeStampParser(event.start.local);
 						return (
-							<li key={idx}>{event.name.text}</li>
+							<li key={idx}>
+								<h4>{event.name.text} {datetime[0]} {datetime[1]}</h4>
+								<h4>{event.url}</h4>
+							</li>
 						);
 					})}
 				</ul>
