@@ -10,7 +10,8 @@ class Search extends Component{
     this.handleZipcode = this.handleZipcode.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleSelect = this.handleSelect.bind(this);
-    this.handleDate = this.handleDate.bind(this);
+    this.handleStartDate = this.handleStartDate.bind(this);
+    this.handleEndDate = this.handleEndDate.bind(this);
 
     this.state = {
       input: "",
@@ -65,7 +66,7 @@ class Search extends Component{
     });
   }
 
-  handleDate(event, date){
+  handleEndDate(event, date){
     this.setState({
       endDate: date,
     });
@@ -94,7 +95,7 @@ class Search extends Component{
 
             <input type="submit"/>
           </form>
-         
+
           <MuiThemeProvider>
             <DatePicker
               hintText="Start Date Input"
