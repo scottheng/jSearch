@@ -5,16 +5,17 @@ export const fetchEvents = (searchQuery, zipcode, radius, date) => {
 		method:'get',
 		url:"https://www.eventbriteapi.com/v3/events/search/?token=FL7XRX7KTFAZN3TLOMLO",
 		params: {
-			q: "tech",
+			q: "cooking",
 			"location.address": "94105",
-			"location.within": "5mi"
+			"location.within": "5mi",
+			sort_by: "date"
 		}
-	}).then(response => console.log(response.data.events));
+	});
 };
 
 export const fetchEventbriteEvent = () => {
   return axios({
     method:'get',
     url:"https://www.eventbriteapi.com/v3/events/33467242423/?token=FL7XRX7KTFAZN3TLOMLO"
-  }).then(response => console.log(response.data));
+  });
 };
