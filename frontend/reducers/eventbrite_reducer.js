@@ -4,7 +4,7 @@ import {
 } from '../actions/eventbrite_actions';
 import merge from 'lodash/merge';
 
-const eventbriteReducer = (state = {}, action) => {
+const eventbriteReducer = (state = [], action) => {
 	Object.freeze(state);
 	let newState = merge({}, state);
 
