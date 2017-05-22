@@ -5,7 +5,7 @@ import { fetchEbEvents } from '../../actions/eventbrite_actions';
 import eventbriteIndex from './eventbrite_index';
 
 const mapStateToProps = (state, ownProps) => {
-	console.log(state);
+	// console.log(state);
 	return {
 		events: state.eventbrite
 	};

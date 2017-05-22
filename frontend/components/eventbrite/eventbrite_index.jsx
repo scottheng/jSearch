@@ -16,7 +16,7 @@ class eventbriteIndex extends React.Component {
 	}
 
 	render() {
-		console.log(this.props.events);
+		// console.log(this.props.events);
     if(this.props.events.length === 0){
       return <div>Loading...</div>;
     }
