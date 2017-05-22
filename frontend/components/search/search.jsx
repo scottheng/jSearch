@@ -15,7 +15,8 @@ class Search extends Component{
     this.state = {
       input: "",
       city: "",
-      date: null,
+      startDate: null,
+      endDate: null,
       zipcode: "",
       radius: ""
     };
@@ -55,12 +56,18 @@ class Search extends Component{
     //dispatch both actions here.
     // console.log(this.state);
     // console.log(this.state.date.getTime());
-    this.setState({input: "", city: "", radius: "", date: null, zipcode: ""});
+    this.setState({input: "", city: "", radius: "", startDate: null, endDate: null, zipcode: ""});
+  }
+
+  handleStartDate(event, date){
+    this.setState({
+      startDate: date,
+    });
   }
 
   handleDate(event, date){
     this.setState({
-      date: date,
+      endDate: date,
     });
   }
 
@@ -90,12 +97,18 @@ class Search extends Component{
          
           <MuiThemeProvider>
             <DatePicker
-              hintText="Date Input"
-              value={this.state.date}
-              onChange={this.handleDate}
+              hintText="Start Date Input"
+              value={this.state.startDate}
+              onChange={this.handleStartDate}
             />
           </MuiThemeProvider>
-
+          <MuiThemeProvider>
+            <DatePicker
+              hintText="End Date Input"
+              value={this.state.endDate}
+              onChange={this.handleEndDate}
+            />
+          </MuiThemeProvider>
         </div>
       </div>
     );
