@@ -6,17 +6,17 @@ class Meetup extends Component{
     super(props);
   }
 
-  componentDidMount(){
-    const request = {};
-    // this.props.fetchMeetups(request);
-  }
+  // componentDidMount(){
+  //   let request = {};
+  //   this.props.fetchMeetups(request);
+  // }
 
   render(){
 
     if(Object.keys(this.props.meetups).length === 0){
       return <div>Loading...</div>;
     }
-
+    // console.log(this.props)
     let row = this.props.meetups.results.slice(0, 10);
     return(
       <div>
@@ -26,6 +26,7 @@ class Meetup extends Component{
               <MeetupItem
                 key={id}
                 name={el.name}
+                city={el.city}
                 time={el.time}
                 eventUrl={el.event_url}
                 />
