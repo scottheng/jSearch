@@ -7,6 +7,7 @@ const mapStateToProps = (state, ownProps) => {
   return {
     meetups: state.meetup.data,
     eventbrite: state.eventbrite
+
   };
 };
 
