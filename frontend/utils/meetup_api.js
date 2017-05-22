@@ -27,7 +27,7 @@ export const fetchMeetups = (request) => {
 			zipcode: 94015,
 			radius: 15.0,
       text: "tech AND code",
-			// time: epoch,
+			order: "time",
 			text_format:"plain"
     }
 	});
