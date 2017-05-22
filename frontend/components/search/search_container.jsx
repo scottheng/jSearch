@@ -6,7 +6,7 @@ import { fetchEbEvents } from '../../actions/eventbrite_actions';
 const mapStateToProps = (state, ownProps) => {
   return {
     meetups: state.meetup.data,
-    eventbrite: state.eventbrite.data
+    eventbrite: state.eventbrite
   };
 };
 
