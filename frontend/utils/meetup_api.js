@@ -3,6 +3,11 @@ import axios from 'axios';
 
 export const fetchMeetups = (request) => {
 	console.log(request);
+
+	let stringInput = parseInput(request.input);
+	let startDate = parseDate(request.startDate);
+	let endDate = parseDate(request.endDate);
+
 	return axios({
 		method:'get',
 		url:"https://api.meetup.com/2/open_events/?key=682f5e4b26d16d31377034866e33",
@@ -10,13 +15,22 @@ export const fetchMeetups = (request) => {
       city: request.city,
 			zipcode: request.zipcode,
 			radius: request.radius,
-      text: request.text,
-			time: request.time,
+      text: stringInput,
+			time: `${startDate},${endDate}`,
+			order: "time",
 			text_format: "plain"
     }
-	}).then(response => console.log(response.data.results));
+	});
 };
 
+
+function parseInput(input){
+	return input.split(" ").join(" AND ");
+}
+
+function parseDate(date){
+	return date.getTime();
+}
 
 //example
 // export const fetchMeetups = (request) => {
