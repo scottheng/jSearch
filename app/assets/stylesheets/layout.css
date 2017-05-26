@@ -1,0 +1,11 @@
+.flex-container {
+	display: flex;
+}
+
+.flex-vertical {
+	justify-content: column;
+}
+
+.flex-horizontal {
+	justify-content: row;
+}
