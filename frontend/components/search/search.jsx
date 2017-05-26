@@ -78,9 +78,11 @@ class Search extends Component{
   render(){
 
     return(
+
       <div className="search-outer-container">
         <div className="search-inner-container">
           <form onSubmit={this.handleSubmit}>
+
 
             <input className="splash-search-input" onChange={this.handleInput} value={this.state.input} type="text" placeholder="Search here"/>
 
@@ -122,7 +124,7 @@ class Search extends Component{
               <input className="splash-input-submit" type="submit"/>
             </div>
           </form>
-
+          
         </div>
       </div>
     );

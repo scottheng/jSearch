@@ -22,15 +22,17 @@ class eventbriteIndex extends React.Component {
     }
 
 		return (
-			<div>
-				<h1>Hello eventbrite</h1>
-				<ul>
+			<div className="events-index">
+				<ul className="events-list">
 					{this.props.events.map((event, idx) => {
 						const datetime = timeStampParser(event.start.local);
 						return (
-							<li key={idx}>
-								<h4>{event.name.text} {datetime[0]} {datetime[1]}</h4>
-								<h4>{event.url}</h4>
+							<li key={idx} className="events-item">
+								<h4>{event.name.text}</h4>
+								<h4>Date: {datetime[0]}</h4>
+								<h4>Time: {datetime[1]}</h4>
+								<a href={event.url}>Go to Page</a>
+								{/*<h4>{event.url}</h4>*/}
 							</li>
 						);
 					})}
