@@ -3,8 +3,8 @@ import * as APIUtil from '../utils/eventbriteAPI';
 export const RECEIVE_EB_EVENTS = 'RECEIVE_EB_EVENTS';
 export const RECEIVE_EB_EVENT = 'RECEIVE_EB_EVENT';
 
-export const fetchEbEvents = () => dispatch => (
-	APIUtil.fetchEvents()
+export const fetchEbEvents = (params) => dispatch => (
+	APIUtil.fetchEvents(params)
 	.then(response => dispatch(receiveEBEvents(response.data.events)))
 );
 

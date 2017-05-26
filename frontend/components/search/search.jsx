@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import DatePicker from 'material-ui/DatePicker';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import { timeStampParser } from '../../utils/timestamp_parser';
 
 class Search extends Component{
   constructor(props){
@@ -54,6 +55,7 @@ class Search extends Component{
 
   handleSubmit(event){
     event.preventDefault();
+    this.props.fetchEbEvents(this.state);
     //dispatch both actions here.
     // console.log(this.state);
     // console.log(this.state.date.getTime());
