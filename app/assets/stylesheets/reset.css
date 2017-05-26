@@ -1,5 +1,5 @@
 html, body, header, h1,
-nav, h2, ul, h3 {
+nav, h2, ul, h3, h4 {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -11,4 +11,19 @@ nav, h2, ul, h3 {
   vertical-align: inherit;
   box-sizing: inherit;
   background: transparent;
+}
+
+html {
+	position: relative;
+	height: 100%;
+}
+
+body {
+	width: 100%;
+	margin: 0 auto;
+	font-family: 'Arial';
+}
+
+ul {
+  list-style: none;
 }

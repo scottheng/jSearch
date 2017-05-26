@@ -6,7 +6,7 @@ import IndexPage from './pages/index_page';
 
 const App = (props) => {
   return (
-    <div>
+    <div className="flex-container">
       <IndexPage />
     </div>
   );

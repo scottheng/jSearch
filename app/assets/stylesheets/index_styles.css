@@ -1,0 +1,10 @@
+.events-index {
+	background: lightblue;
+	max-height: 100vh;
+	overflow-y: scroll;
+}
+
+.events-item {
+	background: lightcoral;
+	margin: 10px;
+}

@@ -8,7 +8,7 @@ class IndexPage extends React.Component {
 		return (
 			<div className="flex-container flex-vertical">
 				<SearchContainer />
-				<div className="flex-container flex-horizontal">
+				<div>
 					<EventBriteContainer />
 					<MeetupContainer />
 				</div>

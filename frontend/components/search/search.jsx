@@ -77,9 +77,8 @@ class Search extends Component{
 
   render(){
     return(
-      <div>
-        <div>
-          <form onSubmit={this.handleSubmit}>
+      <div className="flex-container search-container">
+          <form onSubmit={this.handleSubmit} className="align-self-center">
 
             <input onChange={this.handleInput} value={this.state.input} type="text" placeholder="Search here"/>
 
@@ -113,7 +112,6 @@ class Search extends Component{
               onChange={this.handleEndDate}
             />
           </MuiThemeProvider>
-        </div>
       </div>
     );
   }
