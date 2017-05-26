@@ -1,0 +1,27 @@
+
+.splash-image{
+  height: 100vh;
+  background-image: url(https://res.cloudinary.com/deh9l9lyq/image/upload/v1495830980/joseph-yates-165101_im4z9z.jpg);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+
+  min-height: 500px;
+  min-width: 500px;
+}
+
+.search-outer-container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.search-inner-container{
+  background-color: pink;
+  width: 600px;
+  align-self: center;
+}
+
+.input{
+
+}

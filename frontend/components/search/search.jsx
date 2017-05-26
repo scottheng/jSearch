@@ -78,8 +78,8 @@ class Search extends Component{
   render(){
 
     return(
-      <div>
-        <div>
+      <div className="search-outer-container">
+        <div className="search-inner-container">
           <form onSubmit={this.handleSubmit}>
 
             <input onChange={this.handleInput} value={this.state.input} type="text" placeholder="Search here"/>
