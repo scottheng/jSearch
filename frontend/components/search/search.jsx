@@ -82,38 +82,47 @@ class Search extends Component{
         <div className="search-inner-container">
           <form onSubmit={this.handleSubmit}>
 
-            <input onChange={this.handleInput} value={this.state.input} type="text" placeholder="Search here"/>
+            <input className="splash-search-input" onChange={this.handleInput} value={this.state.input} type="text" placeholder="Search here"/>
 
-            <input onChange={this.handleCity} value={this.state.city} type="text" placeholder="City" />
+            <div className="splash-input-container">
+              <input className="splash-input-city" onChange={this.handleCity} value={this.state.city} type="text" placeholder="City" />
 
-            <input onChange={this.handleZipcode} value={this.state.zipcode} type="number" placeholder="Zip Code"/>
+              <input className="splash-input-zipcode" onChange={this.handleZipcode} value={this.state.zipcode} type="number" placeholder="Zip Code"/>
 
-            <select value={this.state.radius} onChange={this.handleSelect}>
-              <option value="" disabled>Select Radius</option>
-              <option value='5'>5 miles</option>
-              <option value='10'>10 miles</option>
-              <option value='25'>25 miles</option>
-              <option value='50'>50 miles</option>
-            </select>
+              <select className="splash-input-radius" value={this.state.radius} onChange={this.handleSelect}>
+                <option value="" disabled>Select Radius</option>
+                <option value='5'>5 miles</option>
+                <option value='10'>10 miles</option>
+                <option value='25'>25 miles</option>
+                <option value='50'>50 miles</option>
+              </select>
+            </div>
 
+            <div className="splash-date-picker-container">
 
-            <input type="submit"/>
+              <MuiThemeProvider>
+                <DatePicker
+                  className="splash-date-picker"
+                  hintText="Start Date Input"
+                  value={this.state.startDate}
+                  onChange={this.handleStartDate}
+                />
+              </MuiThemeProvider>
+              <MuiThemeProvider>
+                <DatePicker
+                  className="splash-date-picker"
+                  hintText="End Date Input"
+                  value={this.state.endDate}
+                  onChange={this.handleEndDate}
+                />
+              </MuiThemeProvider>
+            </div>
+
+            <div className="splash-input-submit-container">
+              <input className="splash-input-submit" type="submit"/>
+            </div>
           </form>
 
-          <MuiThemeProvider>
-            <DatePicker
-              hintText="Start Date Input"
-              value={this.state.startDate}
-              onChange={this.handleStartDate}
-            />
-          </MuiThemeProvider>
-          <MuiThemeProvider>
-            <DatePicker
-              hintText="End Date Input"
-              value={this.state.endDate}
-              onChange={this.handleEndDate}
-            />
-          </MuiThemeProvider>
         </div>
       </div>
     );
