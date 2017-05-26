@@ -19,6 +19,7 @@ class MeetupItem extends Component{
         <div>{this.props.name}</div>
         <div>{this.eventDate}</div>
         <div>{this.eventTime}</div>
+        <div>{this.props.city}</div>
         <div>{this.props.eventUrl}</div>
       </li>
     );
