@@ -15,12 +15,18 @@ class MeetupItem extends Component{
 
   render(){
     return(
-      <li>
-        <div>{this.props.name}</div>
-        <div>{this.eventDate}</div>
-        <div>{this.eventTime}</div>
-        <div>{this.props.city}</div>
-        <div>{this.props.eventUrl}</div>
+      <li className="events-item flex-container flex-horizontal">
+
+        <div className="events-left">
+          <h4>Date: {this.eventDate}</h4>
+          <h4>Time: {this.eventTime}</h4>
+        </div>
+
+        <div className="events-right">
+          <h3>{this.props.name}</h3>
+          <h3>{this.props.eventUrl}</h3>
+        </div>
+
       </li>
     );
   }

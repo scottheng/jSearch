@@ -2,7 +2,6 @@ import axios from 'axios';
 
 
 export const fetchMeetups = (request) => {
-	console.log(request);
 
 	let stringInput = parseInput(request.input);
 	let startDate = parseDate(request.startDate);

@@ -11,10 +11,5 @@ document.addEventListener('DOMContentLoaded', () => {
   injectTapEventPlugin();
   const root = document.getElementById('root');
   const store = configureStore();
-
-
-  // window.fetchEvents = fetchEvents;
-  window.fetchMeetups = fetchMeetups;
-
   ReactDOM.render(<Root store={ store }/>, root);
 });

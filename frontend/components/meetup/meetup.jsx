@@ -6,33 +6,27 @@ class Meetup extends Component{
     super(props);
   }
 
-  // componentDidMount(){
-  //   let request = {};
-  //   this.props.fetchMeetups(request);
-  // }
-
   render(){
 
     if(Object.keys(this.props.meetups).length === 0){
       return <div>Loading...</div>;
     }
-    // console.log(this.props)
-    let row = this.props.meetups.results.slice(0, 10);
+
+    // let row = this.props.meetups.results.slice(0, 10);
     return(
-      <div>
-        <div>
-          <ul>
-            {row.map( (el, id) => (
-              <MeetupItem
-                key={id}
-                name={el.name}
-                city={el.city}
-                time={el.time}
-                eventUrl={el.event_url}
-                />
-            ))}
-          </ul>
-        </div>
+      <div className="events-index flex-container flex-vertical">
+        <h1 className="align-self-center">Meetup Events</h1>
+        <ul className="events-list">
+          {this.props.meetups.results.map( (el, id) => (
+            <MeetupItem
+              key={id}
+              name={el.name}
+              city={el.city}
+              time={el.time}
+              eventUrl={el.event_url}
+              />
+          ))}
+        </ul>
       </div>
     );
   }
@@ -40,9 +34,3 @@ class Meetup extends Component{
 }
 
 export default Meetup;
-
-
-// <MeetupItem
-//   key={id}
-//   time={this.setUpDate()}
-//   />
