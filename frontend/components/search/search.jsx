@@ -79,14 +79,16 @@ class Search extends Component{
 
     return(
 
-      <div className="search-outer-container">
-        <div className="search-inner-container">
-          <form onSubmit={this.handleSubmit}>
+      <div className="splash-search-outer-container">
+        <div className="splash-search-inner-container">
+          <form className="splash-search-form" onSubmit={this.handleSubmit}>
 
-
+            <div className="splash-search-input-container">
             <input className="splash-search-input" onChange={this.handleInput} value={this.state.input} type="text" placeholder="Search here"/>
+            </div>
 
             <div className="splash-input-container">
+
               <input className="splash-input-city" onChange={this.handleCity} value={this.state.city} type="text" placeholder="City" />
 
               <input className="splash-input-zipcode" onChange={this.handleZipcode} value={this.state.zipcode} type="number" placeholder="Zip Code"/>
@@ -124,7 +126,7 @@ class Search extends Component{
               <input className="splash-input-submit" type="submit"/>
             </div>
           </form>
-          
+
         </div>
       </div>
     );
