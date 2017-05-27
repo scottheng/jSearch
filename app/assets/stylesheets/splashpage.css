@@ -106,3 +106,7 @@
   width: 100px;
   border-radius: 5px;
 }
+
+.splash-input-submit:hover {
+  background: rgb(43, 42, 42);
+}
