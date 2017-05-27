@@ -1,10 +1,20 @@
 .events-index {
-	background: lightblue;
+	background: white;
 	max-height: 100vh;
 	overflow-y: scroll;
+	max-width: 50%;
+	margin: 20px;
+	
 }
 
 .events-item {
-	background: lightcoral;
+	background: white;
 	margin: 10px;
+	border: 1px solid grey;
+	padding: 10px;
+}
+
+.events-left {
+	min-width: 150px;
+	color: #7C7575;
 }

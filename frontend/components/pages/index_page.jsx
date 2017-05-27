@@ -6,12 +6,10 @@ import EventBriteContainer from '../eventbrite/eventbrite_index_container';
 class IndexPage extends React.Component {
 	render() {
 		return (
-			<div className="flex-container flex-vertical">
-				<SearchContainer />
-				<div>
-					<EventBriteContainer />
-					<MeetupContainer />
-				</div>
+			<div className="flex-container flex-horizontal">
+				{/*<SearchContainer />*/}
+				<EventBriteContainer />
+				<MeetupContainer />
 			</div>
 		);
 	}

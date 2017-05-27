@@ -9,7 +9,7 @@ class eventbriteIndex extends React.Component {
 	}
 
 	componentDidMount() {
-		// this.props.fetchEbEvents();
+		this.props.fetchEbEvents();
 		if (this.props.events) {
 			this.setState({events: this.props.events});
 		}
@@ -27,11 +27,15 @@ class eventbriteIndex extends React.Component {
 					{this.props.events.map((event, idx) => {
 						const datetime = timeStampParser(event.start.local);
 						return (
-							<li key={idx} className="events-item">
-								<h4>{event.name.text}</h4>
-								<h4>Date: {datetime[0]}</h4>
-								<h4>Time: {datetime[1]}</h4>
-								<a href={event.url}>Go to Page</a>
+							<li key={idx} className="events-item flex-container flex-horizontal">
+								<div className="events-left">
+									<h4>Date: {datetime[0]}</h4>
+									<h4>Time: {datetime[1]}</h4>
+								</div>
+								<div className="events-right">
+									<h3>{event.name.text}</h3>
+								</div>
+								{/*<a href={event.url}>Go to Page</a>*/}
 								{/*<h4>{event.url}</h4>*/}
 							</li>
 						);
