@@ -18,3 +18,18 @@
 	min-width: 150px;
 	color: #7C7575;
 }
+
+.search-index {
+	min-width: 100%;
+
+}
+
+.search-form {
+	padding: 10px;
+	justify-content: center;
+}
+
+.search-input {
+	border-bottom: 1px solid black;
+	margin: 5px;
+}
