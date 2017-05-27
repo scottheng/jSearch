@@ -21,7 +21,7 @@ html {
 body {
 	width: 100%;
 	margin: 0 auto;
-	font-family: 'Arial';
+	font-family: Helvetica, Arial, sans-serif;
 }
 
 ul {
@@ -33,4 +33,12 @@ a {
 	border-radius: 50%;
 	color: black;
 	text-decoration-style: none;
+}
+
+h1 {
+	font-size: 24px;
+}
+
+h3 {
+	font-size: 20px;
 }
