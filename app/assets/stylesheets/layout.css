@@ -3,11 +3,11 @@
 }
 
 .flex-vertical {
-	justify-content: column;
+	flex-direction: column;
 }
 
 .flex-horizontal {
-	justify-content: row;
+	flex-direction: row;
 }
 
 .align-self-center {
