@@ -9,7 +9,7 @@ import IndexPage from './pages/index_page';
 const App = (props) => {
   return (
     <div>
-      <IndexPage />
+      <IndexPage/>
     </div>
   );
 };

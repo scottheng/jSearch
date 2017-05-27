@@ -26,9 +26,7 @@ class Search extends Component{
 
   handleInput(e){
     e.preventDefault();
-    // console.log(e.target.value);
     this.setState({input: e.target.value});
-    // console.log(this.state.input);
   }
 
   handleCity(e){

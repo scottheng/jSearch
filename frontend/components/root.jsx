@@ -4,6 +4,8 @@ import { HashRouter as Router, Route, IndexRoute, onEnter } from 'react-router-d
 import MeetupContainer from './meetup/meetup_container';
 // import injectTapEventPlugin from 'react-tap-event-plugin';
 import App from './app';
+// import SplashPage from './pages/splash_page';
+// import IndexPage from './pages/index_page';
 
 class Root extends React.Component{
   constructor(props){
