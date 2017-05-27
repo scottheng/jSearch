@@ -22,7 +22,8 @@ class eventbriteIndex extends React.Component {
     }
 
 		return (
-			<div className="events-index">
+			<div className="events-index flex-container flex-vertical">
+				<h1 className="align-self-center">Eventbrite Events</h1>
 				<ul className="events-list">
 					{this.props.events.map((event, idx) => {
 						const datetime = timeStampParser(event.start.local);
