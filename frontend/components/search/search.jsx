@@ -56,9 +56,6 @@ class Search extends Component{
   handleSubmit(event){
     event.preventDefault();
     this.props.fetchEbEvents(this.state);
-    //dispatch both actions here.
-    // console.log(this.state);
-    // console.log(this.state.date.getTime());
     this.props.fetchMeetups(this.state);
     this.setState({input: "", city: "", radius: "", startDate: null, endDate: null, zipcode: ""});
   }
@@ -78,7 +75,6 @@ class Search extends Component{
   render(){
 
     return(
-
       <div className="splash-search-outer-container">
         <div className="splash-search-inner-container">
           <form className="splash-search-form" onSubmit={this.handleSubmit}>
