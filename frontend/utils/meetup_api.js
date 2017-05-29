@@ -10,7 +10,7 @@ export const fetchMeetups = (request) => {
 
 	return axios({
 		method:'get',
-		url:"https://api.meetup.com/2/open_events/?key=682f5e4b26d16d31377034866e33",
+		url:"https://api.meetup.com/2/open_events/?key=5815414d494c24b2f64765e64d592f",
     params:{
       city: request.city,
 			zip: zipcode,
