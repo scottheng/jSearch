@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import DatePicker from 'material-ui/DatePicker';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import { timeStampParser } from '../../utils/timestamp_parser';
+import { withRouter } from 'react-router-dom';
 
 class Search extends Component{
   constructor(props){
@@ -22,6 +23,10 @@ class Search extends Component{
       zipcode: "",
       radius: ""
     };
+  }
+
+  navigateToIndex() {
+    this.props.history.push('/index');
   }
 
   handleInput(e){
@@ -56,6 +61,7 @@ class Search extends Component{
     this.props.fetchEbEvents(this.state);
     this.props.fetchMeetups(this.state);
     this.setState({input: "", city: "", radius: "", startDate: null, endDate: null, zipcode: ""});
+    this.navigateToIndex();
   }
 
   handleStartDate(event, date){
@@ -71,7 +77,7 @@ class Search extends Component{
   }
 
   render(){
-
+    // console.log(this.props)
     return(
       <div className="splash-search-outer-container">
         <div className="splash-logo">
@@ -106,7 +112,7 @@ class Search extends Component{
               <MuiThemeProvider>
                 <DatePicker
                   className="splash-date-picker"
-                  hintText="Start Date Input"
+                  hintText="Start Date"
                   value={this.state.startDate}
                   onChange={this.handleStartDate}
                 />
@@ -114,7 +120,7 @@ class Search extends Component{
               <MuiThemeProvider>
                 <DatePicker
                   className="splash-date-picker"
-                  hintText="End Date Input"
+                  hintText="End Date"
                   value={this.state.endDate}
                   onChange={this.handleEndDate}
                 />
@@ -132,4 +138,4 @@ class Search extends Component{
   }
 }
 
-export default Search;
+export default withRouter(Search);

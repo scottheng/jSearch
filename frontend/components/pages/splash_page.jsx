@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import Search from '../search/search';
+import SearchContainer from '../search/search_container';
 
 const SplashPage = () => {
   return(
     <div className="splash-outer-container">
       <div className="splash-image">
-        <Search />
+        <SearchContainer />
       </div>
     </div>
   );
