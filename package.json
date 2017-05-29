@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "webpack": "webpack --watch",
-    "postinstall": "webpack"
+    "postinstall": "webpack",
+    "start": "webpack-dev-server --inline"
   },
   "keywords": [],
   "author": "",
@@ -27,6 +28,7 @@
     "redux": "^3.6.0",
     "redux-devtools-extension": "^2.13.2",
     "redux-thunk": "^2.2.0",
-    "webpack": "^2.5.1"
+    "webpack": "^2.5.1",
+    "webpack-dev-server": "^2.4.5"
   }
 }
