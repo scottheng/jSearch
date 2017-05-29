@@ -24,7 +24,7 @@ class MeetupItem extends Component{
 
         <div className="events-right">
           <h3>{this.props.name}</h3>
-          <h3>{this.props.eventUrl}</h3>
+          {/*<h3>{this.props.eventUrl}</h3>*/}
         </div>
 
       </li>
