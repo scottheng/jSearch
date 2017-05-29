@@ -8,7 +8,7 @@ class Meetup extends Component{
 
   render(){
 
-    if(Object.keys(this.props.meetups).length === 0){
+    if(Object.keys(this.props.meetups).length === 0 || this.props.eventbrite.length === 0){
       return <div>Loading...</div>;
     }
 

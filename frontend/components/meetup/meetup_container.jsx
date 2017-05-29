@@ -5,6 +5,7 @@ import { meetupDataSelector } from '../../reducers/meetup_selectors';
 
 const mapStateToProps = (state, ownProps) => {
   return {
+    eventbrite: state.eventbrite,
     meetups: state.meetup.data
   };
 };
