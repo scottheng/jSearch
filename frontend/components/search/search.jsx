@@ -74,6 +74,11 @@ class Search extends Component{
 
     return(
       <div className="splash-search-outer-container">
+        <div className="splash-logo">
+          <h1>M</h1>
+          <h4>MEETARII</h4>
+        </div>
+
         <div className="splash-search-inner-container">
           <form className="splash-search-form" onSubmit={this.handleSubmit}>
 
