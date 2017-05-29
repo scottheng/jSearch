@@ -7,7 +7,8 @@ import eventbriteIndex from './eventbrite_index';
 const mapStateToProps = (state, ownProps) => {
 	// console.log(state);
 	return {
-		events: state.eventbrite
+		events: state.eventbrite,
+		meetupEvents: state.meetup.data
 	};
 };
 
