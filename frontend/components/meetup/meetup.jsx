@@ -8,7 +8,7 @@ class Meetup extends Component{
 
   render(){
 
-    if(Object.keys(this.props.meetups).length === 0 || this.props.eventbrite.length === 0){
+    if(this.props.meetups.length === 0 || this.props.eventbrite.length === 0){
       return <div>Loading...</div>;
     }
 
@@ -17,13 +17,11 @@ class Meetup extends Component{
       <div className="events-index flex-container flex-vertical">
         <h1 className="align-self-center">Meetup Events</h1>
         <ul className="events-list">
-          {this.props.meetups.results.map( (el, id) => (
+          {this.props.meetups.map( (el, id) => (
             <MeetupItem
               key={id}
-              name={el.name}
-              city={el.city}
-              time={el.time}
-              eventUrl={el.event_url}
+              events={el}
+              date={Object.keys(el)[0]}
               />
           ))}
         </ul>
