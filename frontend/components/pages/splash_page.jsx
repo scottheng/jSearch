@@ -5,7 +5,7 @@ const SplashPage = () => {
   return(
     <div className="splash-outer-container">
       <div className="splash-image">
-        <div className="splash-input-container">
+        <div className="splash-inner-container">
 
           <div className="splash-logo">
             <h1>M</h1>
