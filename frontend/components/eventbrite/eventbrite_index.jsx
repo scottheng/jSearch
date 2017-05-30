@@ -30,8 +30,11 @@ class eventbriteIndex extends React.Component {
 										<h4>Date: {datetime[0]}</h4>
 										<h4>Time: {datetime[1]}</h4>
 									</div>
-									<div className="events-right">
+									<div className="events-center">
 										<h3>{event.name.text}</h3>
+									</div>
+									<div className="events-right">
+										<a href={event.url}>Link To Page</a>
 									</div>
 								</li>
 							);
@@ -46,8 +49,11 @@ class eventbriteIndex extends React.Component {
 											<h4>Date: {datetime[0]}</h4>
 											<h4>Time: {datetime[1]}</h4>
 										</div>
-										<div className="events-right">
+										<div className="events-center">
 											<h3>{event.name.text}</h3>
+										</div>
+										<div className="events-right">
+											<a href={event.url}>Link To Page</a>
 										</div>
 									</li>
 								</div>
