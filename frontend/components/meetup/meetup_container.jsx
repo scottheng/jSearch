@@ -1,12 +1,21 @@
 import { connect } from 'react-redux';
 import Meetup from './meetup';
 import { fetchMeetups } from '../../actions/meetup_actions';
-import { meetupDataSelector } from '../../reducers/meetup_selectors';
+import { meetupSelector } from '../../selectors/meetup_selector';
 
 const mapStateToProps = (state, ownProps) => {
+  let meetupInfo = meetupSelector(state.meetup.data);
+  let meet = [];
+  
+  Object.keys(meetupInfo).forEach( (date) => {
+    let dateObject = {};
+    dateObject[date] = meetupInfo[date];
+    meet.push(dateObject);
+  });
+
   return {
     eventbrite: state.eventbrite,
-    meetups: state.meetup.data
+    meetups: meet
   };
 };
 
