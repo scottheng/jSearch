@@ -7,6 +7,7 @@ class MeetupItem extends Component{
 
   render(){
     return(
+
       <div>
         <h1>{this.props.date}</h1>
         {this.props.events[this.props.date].map((el, id) => (
@@ -23,6 +24,7 @@ class MeetupItem extends Component{
         </li>
       ))}
       </div>
+
     );
   }
 }

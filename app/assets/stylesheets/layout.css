@@ -13,3 +13,7 @@
 .align-self-center {
 	align-self: center;
 }
+
+.events-container {
+	justify-content: center;
+}

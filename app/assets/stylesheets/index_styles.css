@@ -2,9 +2,8 @@
 	background: white;
 	max-height: 100vh;
 	overflow-y: scroll;
-	max-width: 50%;
 	margin: 20px;
-	
+	max-width: 50%;
 }
 
 .events-item {
@@ -17,6 +16,10 @@
 .events-left {
 	min-width: 150px;
 	color: #7C7575;
+}
+
+.events-right {
+	align-items: flex-end;
 }
 
 .search-index {
