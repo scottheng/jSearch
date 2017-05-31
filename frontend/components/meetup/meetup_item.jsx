@@ -8,8 +8,8 @@ class MeetupItem extends Component{
   render(){
     return(
 
-      <div>
-        <h1>{this.props.date}</h1>
+      <div className="flex-container flex-vertical">
+        <h1 className="date-class">{this.props.date}</h1>
         {this.props.events[this.props.date].map((el, id) => (
           <li key={id} className="events-item flex-container flex-horizontal">
           <div className="events-left">
@@ -17,9 +17,11 @@ class MeetupItem extends Component{
             <h4>Time: {el.eventTime}</h4>
           </div>
 
-          <div className="events-right">
+          <div className="events-center">
             <h3>{el.name}</h3>
-            {/*<h3>{this.props.eventUrl}</h3>*/}
+          </div>
+          <div className="events-right">
+            <a target="_blank" href={el.eventUrl}>Link To Page</a>
           </div>
         </li>
       ))}
