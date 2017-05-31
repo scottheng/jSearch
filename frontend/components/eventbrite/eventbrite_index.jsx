@@ -43,9 +43,9 @@ class eventbriteIndex extends React.Component {
 							else {
 								currentDate = datetime[0];
 								return (
-									<div className="flex-container flex-vertical">
+									<div key={idx} className="flex-container flex-vertical">
 										<h1 className="date-class">{currentDate}</h1>
-										<li key={idx} className="events-item flex-container flex-horizontal">
+										<li className="events-item flex-container flex-horizontal">
 											<div className="events-left">
 												<h4>Date: {datetime[0]}</h4>
 												<h4>Time: {datetime[1]}</h4>
