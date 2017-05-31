@@ -57,16 +57,18 @@ class SearchIndex extends Component{
     event.preventDefault();
     this.props.fetchEbEvents(this.state);
     this.props.fetchMeetups(this.state);
-    this.setState({input: "", city: "", radius: "", startDate: null, endDate: null, zipcode: ""});
+    // this.setState({input: "", city: "", radius: "", startDate: null, endDate: null, zipcode: ""});
   }
 
-  handleStartDate(event, date){
+  handleStartDate(event){
+    let date = new Date(event.target.value);
     this.setState({
       startDate: date,
     });
   }
 
-  handleEndDate(event, date){
+  handleEndDate(event){
+    let date = new Date(event.target.value);
     this.setState({
       endDate: date,
     });
