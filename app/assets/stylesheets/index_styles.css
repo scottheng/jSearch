@@ -1,6 +1,16 @@
 .eventbrite-logo {
 	width: 250px;
 	align-self: center;
+	margin: 23px;
+}
+
+.meetup-logo {
+	width: 250px;
+	align-self: center;
+}
+
+#meetup-index {
+	background: linear-gradient(to right, #E30032, lightcoral);
 }
 
 .events-index {
