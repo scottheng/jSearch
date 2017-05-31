@@ -17,9 +17,11 @@ class MeetupItem extends Component{
             <h4>Time: {el.eventTime}</h4>
           </div>
 
-          <div className="events-right">
+          <div className="events-center">
             <h3>{el.name}</h3>
-            {/*<h3>{this.props.eventUrl}</h3>*/}
+          </div>
+          <div className="events-right">
+            <a href={el.url}>Go To Link</a>
           </div>
         </li>
       ))}

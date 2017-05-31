@@ -8,6 +8,11 @@ class eventbriteIndex extends React.Component {
 		this.state = {events: [], currentDate: null};
 	}
 
+	componentDidMount() {
+		console.log("this is broken");
+		this.props.fetchEbEvents();
+	}
+
 
 	render() {
 		// console.log(this.props.events);
@@ -19,7 +24,7 @@ class eventbriteIndex extends React.Component {
 
 		return (
 			<div className="events-index flex-container flex-vertical">
-				<h1 className="align-self-center">Eventbrite Events</h1>
+				<h1 className="event-title align-self-center">Eventbrite Events</h1>
 				<ul className="events-list">
 					{this.props.events.map((event, idx) => {
 						const datetime = timeStampParser(event.start.local);
