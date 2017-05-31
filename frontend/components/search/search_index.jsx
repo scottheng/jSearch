@@ -87,8 +87,14 @@ class SearchIndex extends Component{
     return(
       <div className="search-index">
         <div className="search-index-outer">
-          <div>
-            <h1>Search for your event today!</h1>
+          <div className="search-index-logo-container">
+            <div className="logo-m-meetarii">
+              <h1 className="logo-m">M</h1>
+              <h4 className="logo-meetarii">MEETARII</h4>
+            </div>
+            <div className="search-index-title-container">
+              <h1 className="search-index-title">Search for your event today!</h1>
+            </div>
           </div>
           <form className="search-form" onSubmit={this.handleSubmit}>
 

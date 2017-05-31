@@ -1,3 +1,15 @@
+.search-index-logo-container{
+	display: flex;
+}
+
+.search-index-title-container{
+ 	align-self: flex-end;
+}
+
+.search-index-title{
+	padding: 7px;
+}
+
 .eventbrite-logo {
 	width: 250px;
 	align-self: center;
@@ -75,7 +87,7 @@
 	height: 200px;
 	display: flex;
 	justify-content: center;
-	padding: 30px;
+	padding: 0 0 30px 40px;
 }
 
 .search-index-outer{
@@ -84,7 +96,7 @@
 
 .search-form {
 	padding: 10px;
-	min-width: 700px;
+	min-width: 1100px;
 	min-height: 150px;
 }
 
