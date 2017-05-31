@@ -28,6 +28,7 @@
 	margin: 10px;
 	border: 1px solid grey;
 	padding: 10px;
+	overflow-x: scroll;
 	border-radius: 10px;
 	opacity: .9;
 }
@@ -44,22 +45,91 @@
 	align-self: center;
 }
 
-.search-index {
-	min-width: 100%;
+.logo-m-meetarii{
+	padding: 5px 12px;
+}
 
+.logo-m{
+ width: 102px;
+ text-align: center;
+ font-family: "Oswald";
+ font-size: 42px;
+ color: #FF5A5F;
+}
+
+.logo-meetarii{
+	font-family: "Oswald";
+	margin-top: -15px;
+	width: 102px;
+	font-size: 30px;
+	color: #FF5A5F;
+}
+
+
+.search-index {
+	width: 100%;
+	height: 200px;
+	display: flex;
+	justify-content: center;
+	padding: 30px;
+}
+
+.search-index-outer{
+	width: 1200px;
 }
 
 .search-form {
 	padding: 10px;
-	justify-content: center;
+	min-width: 700px;
+	min-height: 150px;
+}
+
+.search-input-text{
+	width: 600px;
+	border-bottom: 1px solid black;
+	margin: 15px 0;
 }
 
 .search-input {
 	border-bottom: 1px solid black;
+	margin: 15px;
+}
+
+.search-input-radius{
+	height: 30px;
+	margin: 15px 30px;
+}
+
+.search-index-date-picker-container{
+	display: flex;
+	justify-content: center;
+}
+
+.search-index-date-title{
+	border-bottom: 1px solid black;
+	padding: 3px;
+}
+
+.search-index-date{
+	border-bottom: 1px solid black;
+	margin-right: 20px;
+}
+
+.search-index-submit{
+	cursor: pointer;
+	border: 1px solid;
+	width: 100px;
+	height: 30px;
+	text-align: center;
+	border-radius: 5px;
+	/*background: linear-gradient(to bottom right, orange, red);*/
+	background: #FF5A5F;
+	color: white;
 	margin: 5px;
 }
 
 .date-class {
 	color: white;
 	align-self: center;
+
 }

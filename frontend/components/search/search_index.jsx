@@ -76,33 +76,31 @@ class SearchIndex extends Component{
 
     return(
       <div className="search-index">
-          <form className="search-form flex-container flex-horizontal" onSubmit={this.handleSubmit}>
-            <input className="search-input align-self-center" onChange={this.handleInput} value={this.state.input} type="text" placeholder="Search here"/>
-              <input className="search-input align-self-center" onChange={this.handleCity} value={this.state.city} type="text" placeholder="City" />
-              <input className="search-input align-self-center" onChange={this.handleZipcode} value={this.state.zipcode} type="number" placeholder="Zip Code"/>
-              <select className="align-self-center" value={this.state.radius} onChange={this.handleSelect}>
-                <option value="" disabled>Select Radius</option>
-                <option value='5'>5 miles</option>
-                <option value='10'>10 miles</option>
-                <option value='25'>25 miles</option>
-                <option value='50'>50 miles</option>
-              </select>
-              <MuiThemeProvider className="align-self-center">
-                <DatePicker
-                  hintText="Start Date Input"
-                  value={this.state.startDate}
-                  onChange={this.handleStartDate}
-                />
-              </MuiThemeProvider>
-              <MuiThemeProvider className="align-self-center">
-                <DatePicker
-                  hintText="End Date Input"
-                  value={this.state.endDate}
-                  onChange={this.handleEndDate}
-                />
-              </MuiThemeProvider>
-              <input className="align-self-center" type="submit"/>
+        <div className="search-index-outer">
+          <div>
+            <h1>Search for your event today!</h1>
+          </div>
+          <form className="search-form" onSubmit={this.handleSubmit}>
+
+            <input className="search-input-text" onChange={this.handleInput} value={this.state.input} type="text" placeholder="Search here"/>
+            <input className="search-input" onChange={this.handleCity} value={this.state.city} type="text" placeholder="City" />
+            <input className="search-input" onChange={this.handleZipcode} value={this.state.zipcode} type="number" placeholder="Zip Code"/>
+            <select className="search-input-radius" value={this.state.radius} onChange={this.handleSelect}>
+              <option value="" disabled>Select Radius</option>
+              <option value='5'>5 miles</option>
+              <option value='10'>10 miles</option>
+              <option value='25'>25 miles</option>
+              <option value='50'>50 miles</option>
+            </select>
+
+            <label className="search-index-date-title">Start Date: </label>
+              <input className="search-index-date" onChange={this.handleStartDate} type="date" />
+            <label className="search-index-date-title">End Date: </label>
+            <input className="search-index-date" onChange={this.handleEndDate} type="date" />
+            <input className="search-index-submit" onSubmit={this.handleSubmit} type="submit"/>
+
           </form>
+        </div>
       </div>
     );
   }
