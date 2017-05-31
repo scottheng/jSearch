@@ -7,11 +7,10 @@ class Meetup extends Component{
   }
 
   render(){
-
     if(this.props.meetups.length === 0 || this.props.eventbrite.length === 0){
       return <div>Loading...</div>;
     }
-
+    // console.log(this.props)
     // let row = this.props.meetups.results.slice(0, 10);
     return(
       <div className="events-logo-container flex-container flex-vertical">
