@@ -61,17 +61,25 @@ class SearchIndex extends Component{
   }
 
   handleStartDate(event){
-    let date = new Date(event.target.value);
+    let stringDate = this.stringifyDate(event.target.value);
+    let date = new Date(stringDate);
     this.setState({
       startDate: date,
     });
   }
 
   handleEndDate(event){
-    let date = new Date(event.target.value);
+    let stringDate = this.stringifyDate(event.target.value);
+    let date = new Date(stringDate);
     this.setState({
       endDate: date,
     });
+  }
+
+  stringifyDate(date){
+    let splitDate = date.split("-");
+    splitDate[1] = parseInt(splitDate[1]).toString();
+    return splitDate.join("-");
   }
 
   render(){
