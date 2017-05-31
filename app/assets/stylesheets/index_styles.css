@@ -1,9 +1,26 @@
+.eventbrite-logo {
+	width: 250px;
+	align-self: center;
+	margin: 23px;
+}
+
+.meetup-logo {
+	width: 250px;
+	align-self: center;
+}
+
+#meetup-index {
+	background: linear-gradient(to right, #E30032, lightcoral);
+}
+
 .events-index {
-	background: white;
+	background: linear-gradient(to right, orangered, darkorange, orange);
 	max-height: 100vh;
 	overflow-y: scroll;
 	margin: 20px;
-	max-width: 50%;
+	min-width: 40%;
+	border: 1px solid black;
+	padding-top: 10px;
 }
 
 .events-item {
@@ -12,6 +29,8 @@
 	border: 1px solid grey;
 	padding: 10px;
 	overflow-x: scroll;
+	border-radius: 10px;
+	opacity: .9;
 }
 
 .events-left {
@@ -19,8 +38,11 @@
 	color: #7C7575;
 }
 
+.events-center {
+	width: 400px;
+}
 .events-right {
-	align-items: flex-end;
+	align-self: center;
 }
 
 .logo-m-meetarii{
@@ -103,4 +125,11 @@
 	/*background: linear-gradient(to bottom right, orange, red);*/
 	background: #FF5A5F;
 	color: white;
+	margin: 5px;
+}
+
+.date-class {
+	color: white;
+	align-self: center;
+
 }
