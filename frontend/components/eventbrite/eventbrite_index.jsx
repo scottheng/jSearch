@@ -14,7 +14,7 @@ class eventbriteIndex extends React.Component {
 		let currentDate = null;
 
     if(this.props.events.length === 0 && Object.keys(this.props.meetupEvents).length === 0){
-      return <div>Loading...</div>;
+      return <div className="loader"></div>;
     }
 
 		return (

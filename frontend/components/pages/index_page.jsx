@@ -8,10 +8,6 @@ class IndexPage extends React.Component {
 	render() {
 		return (
 			<div className="flex-container flex-vertical">
-				<div className="logo-m-meetarii">
-					<h1 className="logo-m">M</h1>
-					<h4 className="logo-meetarii">MEETARII</h4>
-				</div>
 				<SearchIndexContainer />
 				<div className="events-container flex-container flex-horizontal">
 					<EventBriteContainer />
