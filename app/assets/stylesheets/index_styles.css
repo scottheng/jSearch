@@ -38,6 +38,10 @@
 	color: #7C7575;
 }
 
+.events-logo-container {
+	max-width: 50%;
+}
+
 .events-center {
 	width: 400px;
 }
