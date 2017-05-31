@@ -40,7 +40,7 @@ class eventbriteIndex extends React.Component {
 											<h3>{event.name.text}</h3>
 										</div>
 										<div className="events-right">
-											<a href={event.url}>Link To Page</a>
+											<a target="_blank" href={event.url}>Link To Page</a>
 										</div>
 									</li>
 								);
@@ -48,8 +48,8 @@ class eventbriteIndex extends React.Component {
 							else {
 								currentDate = datetime[0];
 								return (
-									<div>
-										<h1>{currentDate}</h1>
+									<div className="flex-container flex-vertical">
+										<h1 className="date-class">{currentDate}</h1>
 										<li key={idx} className="events-item flex-container flex-horizontal">
 											<div className="events-left">
 												<h4>Date: {datetime[0]}</h4>
@@ -59,7 +59,7 @@ class eventbriteIndex extends React.Component {
 												<h3>{event.name.text}</h3>
 											</div>
 											<div className="events-right">
-												<a href={event.url}>Link To Page</a>
+												<a target="_blank" href={event.url}>Link to Page</a>
 											</div>
 										</li>
 									</div>

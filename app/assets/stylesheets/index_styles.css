@@ -4,12 +4,13 @@
 }
 
 .events-index {
-	background: linear-gradient(to bottom right, darkorange, orange);
+	background: linear-gradient(to right, orangered, darkorange, orange);
 	max-height: 100vh;
 	overflow-y: scroll;
 	margin: 20px;
 	min-width: 40%;
 	border: 1px solid black;
+	padding-top: 10px;
 }
 
 .events-item {
@@ -18,7 +19,7 @@
 	border: 1px solid grey;
 	padding: 10px;
 	border-radius: 10px;
-	
+	opacity: .9;
 }
 
 .events-left {
@@ -48,3 +49,7 @@
 	margin: 5px;
 }
 
+.date-class {
+	color: white;
+	align-self: center;
+}
