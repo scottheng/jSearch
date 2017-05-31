@@ -6,10 +6,6 @@ class Meetup extends Component{
     super(props);
   }
 
-  componentDidMount() {
-    this.props.fetchMeetups();
-  }
-
   render(){
 
     if(this.props.meetups.length === 0 || this.props.eventbrite.length === 0){

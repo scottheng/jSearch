@@ -8,11 +8,6 @@ class eventbriteIndex extends React.Component {
 		this.state = {events: [], currentDate: null};
 	}
 
-	componentDidMount() {
-		console.log("this is broken");
-		this.props.fetchEbEvents();
-	}
-
 
 	render() {
 		// console.log(this.props.events);
